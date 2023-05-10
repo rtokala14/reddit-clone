@@ -4,6 +4,7 @@ import { Suspense } from "react";
 import Table from "@/components/table";
 import TablePlaceholder from "@/components/table-placeholder";
 import ExpandingArrow from "@/components/expanding-arrow";
+import { UserButton } from "@clerk/nextjs";
 
 export const preferredRegion = "home";
 export const dynamic = "force-dynamic";
@@ -21,6 +22,7 @@ export default function Home() {
       <h1 className="pt-4 pb-8 bg-gradient-to-br from-black via-[#171717] to-[#4b4b4b] bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl">
         Postgres on Vercel
       </h1>
+      <UserButton />
       <Suspense fallback={<TablePlaceholder />}>
         {/* @ts-expect-error Async Server Component */}
         <Table />
