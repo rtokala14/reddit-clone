@@ -33,7 +33,7 @@ export function ThemeChanger() {
       }}
       className=" justify-between"
     >
-      <Label className=" font-normal" htmlFor="darkMode">
+      <Label className=" font-normal hover:cursor-pointer" htmlFor="darkMode">
         Dark Mode
       </Label>
       <Switch id="darkMode" checked={theme === "dark"} />

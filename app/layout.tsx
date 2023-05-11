@@ -15,6 +15,7 @@ import SIgnOutBtnForDD from "@/components/SIgnOutBtnForDD";
 import LoginOrNone from "@/components/LoginOrNone";
 import { ThemeChanger, ThemeProviderX } from "@/components/ThemeProviderX";
 import { Label } from "@/components/ui/label";
+import Link from "next/link";
 
 export const metadata = {
   title: "Reddit Clone",
@@ -49,8 +50,10 @@ export default function RootLayout({
 
 function NavBar() {
   return (
-    <div className=" w-full flex justify-between items-center h-14 px-2 border-b border-b-border">
-      <div>Hello</div>
+    <nav className=" w-full z-50 sticky backdrop-blur-lg top-0 flex justify-between items-center h-14 px-2 border-b border-b-border">
+      <Link href={"/"}>
+        <Button variant={"ghost"}>Reddit</Button>
+      </Link>
       <div className="flex items-center gap-2">
         <LoginOrNone />
         <div className="">
@@ -67,12 +70,14 @@ function NavBar() {
               <DropdownMenuLabel>Account</DropdownMenuLabel>
               <DropdownMenuSeparator />
               <DropdownMenuItem>Profile</DropdownMenuItem>
-              <DropdownMenuItem>Settings</DropdownMenuItem>
+              <Link href={"/user-settings"}>
+                <DropdownMenuItem>Settings</DropdownMenuItem>
+              </Link>
               <SIgnOutBtnForDD />
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
       </div>
-    </div>
+    </nav>
   );
 }
