@@ -13,6 +13,8 @@ import { Button } from "@/components/ui/button";
 import LoginOrProfile from "@/components/LoginOrProfile";
 import SIgnOutBtnForDD from "@/components/SIgnOutBtnForDD";
 import LoginOrNone from "@/components/LoginOrNone";
+import { ThemeChanger, ThemeProviderX } from "@/components/ThemeProviderX";
+import { Label } from "@/components/ui/label";
 
 export const metadata = {
   title: "Reddit Clone",
@@ -33,10 +35,12 @@ export default function RootLayout({
 }) {
   return (
     <ClerkProvider>
-      <html className="dark" lang="en">
+      <html className="" suppressHydrationWarning lang="en">
         <body className={inter.variable}>
-          <NavBar />
-          {children}
+          <ThemeProviderX>
+            <NavBar />
+            {children}
+          </ThemeProviderX>
         </body>
       </html>
     </ClerkProvider>
@@ -55,7 +59,11 @@ function NavBar() {
             <DropdownMenuContent className="w-56">
               <DropdownMenuLabel>General</DropdownMenuLabel>
               <DropdownMenuSeparator />
-              <DropdownMenuItem>Dark Mode</DropdownMenuItem>
+              {/* <DropdownMenuItem className=" justify-between"> */}
+              {/* <Label htmlFor="darkMode">Dark Mode</Label> */}
+              {/* Dark Mode */}
+              <ThemeChanger />
+              {/* </DropdownMenuItem> */}
               <DropdownMenuLabel>Account</DropdownMenuLabel>
               <DropdownMenuSeparator />
               <DropdownMenuItem>Profile</DropdownMenuItem>
