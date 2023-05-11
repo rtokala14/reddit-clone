@@ -7,28 +7,32 @@ import { DropdownMenuTrigger } from "./ui/dropdown-menu";
 import { Button } from "./ui/button";
 
 function LoginOrProfile() {
-  const { isSignedIn, user } = useUser();
+  const { isSignedIn, user, isLoaded } = useUser();
   return (
     <DropdownMenuTrigger asChild>
-      <Button variant={"outline"}>
-        {isSignedIn ? (
-          <>
-            <Avatar className=" h-7 w-7 mr-2">
-              <AvatarImage
-                src={user.profileImageUrl}
-                alt={user.fullName || ""}
-              />
-              <AvatarFallback>{user.username?.charAt(0)}</AvatarFallback>
-            </Avatar>
-            <div>{user.username}</div>
-            <ChevronDown className="ml-2 h-4 w-4" />
-          </>
-        ) : (
-          <>
-            Settings <ChevronDown className="ml-2 h-4 w-4" />
-          </>
-        )}
-      </Button>
+      {isLoaded ? (
+        <Button variant={"outline"}>
+          {isSignedIn ? (
+            <>
+              <Avatar className=" h-7 w-7 mr-2">
+                <AvatarImage
+                  src={user.profileImageUrl}
+                  alt={user.fullName || ""}
+                />
+                <AvatarFallback>{user.username?.charAt(0)}</AvatarFallback>
+              </Avatar>
+              <div>{user.username}</div>
+              <ChevronDown className="ml-2 h-4 w-4" />
+            </>
+          ) : (
+            <>
+              Settings <ChevronDown className="ml-2 h-4 w-4" />
+            </>
+          )}
+        </Button>
+      ) : (
+        <Button variant={"outline"}>Loading...</Button>
+      )}
     </DropdownMenuTrigger>
   );
 }

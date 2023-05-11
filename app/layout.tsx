@@ -33,7 +33,7 @@ export default function RootLayout({
 }) {
   return (
     <ClerkProvider>
-      <html lang="en">
+      <html className="dark" lang="en">
         <body className={inter.variable}>
           <NavBar />
           {children}
