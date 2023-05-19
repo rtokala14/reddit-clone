@@ -26,7 +26,7 @@
     "autoprefixer": "10.4.14",
     "class-variance-authority": "^0.6.0",
     "clsx": "^1.2.1",
-    "drizzle-orm": "^0.25.4",
+    "drizzle-orm": "^0.26.0",
     "eslint": "8.40.0",
     "eslint-config-next": "13.4.3",
     "lucide-react": "^0.218.0",
