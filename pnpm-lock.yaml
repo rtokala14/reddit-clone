@@ -1,4 +1,4 @@
-lockfileVersion: '6.1'
+lockfileVersion: '6.0'
 
 settings:
   autoInstallPeers: true
@@ -39,8 +39,8 @@ dependencies:
     specifier: 18.2.4
     version: 18.2.4
   '@vercel/postgres':
-    specifier: 0.3.0
-    version: 0.3.0
+    specifier: 0.4.0
+    version: 0.4.0
   autoprefixer:
     specifier: 10.4.14
     version: 10.4.14(postcss@8.4.22)
@@ -52,7 +52,7 @@ dependencies:
     version: 1.2.1
   drizzle-orm:
     specifier: ^0.26.0
-    version: 0.26.0(@vercel/postgres@0.3.0)
+    version: 0.26.0(@vercel/postgres@0.4.0)
   eslint:
     specifier: 8.40.0
     version: 8.40.0
@@ -332,8 +332,8 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.14
     dev: false
 
-  /@neondatabase/serverless@0.4.3:
-    resolution: {integrity: sha512-U8tpuF5f0R5WRsciR7iaJ5S2h54DWa6Z6CEW+J4KgwyvRN3q3qDz0MibdfFXU0WqnRoi/9RSf/2XN4TfeaOCbQ==}
+  /@neondatabase/serverless@0.4.19:
+    resolution: {integrity: sha512-atzpP9uBLrWPokXZdVy2iNPmmxVx51HXhrEObDb4KXmsyGEkGhCcb6cs51LA/oyXwjJUeB4AreOoVgMcPAIv5g==}
     dependencies:
       '@types/pg': 8.6.6
     dev: false
@@ -1069,11 +1069,11 @@ packages:
       eslint-visitor-keys: 3.4.1
     dev: false
 
-  /@vercel/postgres@0.3.0:
-    resolution: {integrity: sha512-cOC+x6qMnN54B4y0Fh0DV5LJQp2M7puIKbehQBMutY/8/zpzh+oKaQmnZb2QHn489MGOQKyRLJLgHa2P8M085Q==}
+  /@vercel/postgres@0.4.0:
+    resolution: {integrity: sha512-GemRRKvLi90BC511WQzt5tfVLPNOQ9eNbbbaPquSgasm5ogfWLtjJSbNUD4jYEbs9IxbNovKqr0H0CAjJzOAyw==}
     engines: {node: '>=14.6'}
     dependencies:
-      '@neondatabase/serverless': 0.4.3
+      '@neondatabase/serverless': 0.4.19
       bufferutil: 4.0.7
       utf-8-validate: 6.0.3
       ws: 8.13.0(bufferutil@4.0.7)(utf-8-validate@6.0.3)
@@ -1617,7 +1617,7 @@ packages:
       - supports-color
     dev: true
 
-  /drizzle-orm@0.26.0(@vercel/postgres@0.3.0):
+  /drizzle-orm@0.26.0(@vercel/postgres@0.4.0):
     resolution: {integrity: sha512-ztjhHehcuG5+lpGYxfT/L5I+yd/Z0dOf0fV3cS2ywBU01wkpxjwl4EJZVT7kVzjYfM8kwMGDghAPRPBCK0vULA==}
     peerDependencies:
       '@aws-sdk/client-rds-data': '>=3'
@@ -1676,7 +1676,7 @@ packages:
       sqlite3:
         optional: true
     dependencies:
-      '@vercel/postgres': 0.3.0
+      '@vercel/postgres': 0.4.0
     dev: false
 
   /electron-to-chromium@1.4.378:
