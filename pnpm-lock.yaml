@@ -39,8 +39,8 @@ dependencies:
     specifier: 18.2.7
     version: 18.2.7
   '@vercel/postgres':
-    specifier: 0.3.0
-    version: 0.3.0
+    specifier: 0.4.1
+    version: 0.4.1
   autoprefixer:
     specifier: 10.4.14
     version: 10.4.14(postcss@8.4.27)
@@ -52,7 +52,7 @@ dependencies:
     version: 1.2.1
   drizzle-orm:
     specifier: ^0.27.0
-    version: 0.27.0(@vercel/postgres@0.3.0)
+    version: 0.27.0(@vercel/postgres@0.4.1)
   eslint:
     specifier: 8.40.0
     version: 8.40.0
@@ -526,8 +526,8 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.14
     dev: false
 
-  /@neondatabase/serverless@0.4.3:
-    resolution: {integrity: sha512-U8tpuF5f0R5WRsciR7iaJ5S2h54DWa6Z6CEW+J4KgwyvRN3q3qDz0MibdfFXU0WqnRoi/9RSf/2XN4TfeaOCbQ==}
+  /@neondatabase/serverless@0.5.6:
+    resolution: {integrity: sha512-Ru0lG6W/nQtHRkDFVQFF+1PJYx8wd3jereln0Ep0YkiHey50hjTLVUycQoE4X977605pXMuFWORweuktzph+Xg==}
     dependencies:
       '@types/pg': 8.6.6
     dev: false
@@ -1263,11 +1263,11 @@ packages:
       eslint-visitor-keys: 3.4.1
     dev: false
 
-  /@vercel/postgres@0.3.0:
-    resolution: {integrity: sha512-cOC+x6qMnN54B4y0Fh0DV5LJQp2M7puIKbehQBMutY/8/zpzh+oKaQmnZb2QHn489MGOQKyRLJLgHa2P8M085Q==}
+  /@vercel/postgres@0.4.1:
+    resolution: {integrity: sha512-rYlNnaXrr2/NWK/OodhAUyed0bomaizKKC8XXjNYv8I1K3m75oocP4IGTcBpZe76VCrHuaKW5d6jLQnuRRoNKg==}
     engines: {node: '>=14.6'}
     dependencies:
-      '@neondatabase/serverless': 0.4.3
+      '@neondatabase/serverless': 0.5.6
       bufferutil: 4.0.7
       utf-8-validate: 6.0.3
       ws: 8.13.0(bufferutil@4.0.7)(utf-8-validate@6.0.3)
@@ -1813,7 +1813,7 @@ packages:
       zod: 3.21.4
     dev: true
 
-  /drizzle-orm@0.27.0(@vercel/postgres@0.3.0):
+  /drizzle-orm@0.27.0(@vercel/postgres@0.4.1):
     resolution: {integrity: sha512-LGiJ0icB+wQwgbSCOvAjONY8Ec6G/EDzQQP5PmUaQYeI9OqgpVKHC2T1fFIbvk5dabWsbokJ5NOciVAxriStig==}
     peerDependencies:
       '@aws-sdk/client-rds-data': '>=3'
@@ -1875,7 +1875,7 @@ packages:
       sqlite3:
         optional: true
     dependencies:
-      '@vercel/postgres': 0.3.0
+      '@vercel/postgres': 0.4.1
     dev: false
 
   /electron-to-chromium@1.4.378:
