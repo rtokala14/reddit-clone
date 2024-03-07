@@ -51,8 +51,8 @@ dependencies:
     specifier: ^1.2.1
     version: 1.2.1
   drizzle-orm:
-    specifier: ^0.27.0
-    version: 0.27.0(@vercel/postgres@0.4.1)
+    specifier: ^0.30.0
+    version: 0.30.0(@types/react@18.2.16)(@vercel/postgres@0.4.1)(react@18.2.0)
   eslint:
     specifier: 8.45.0
     version: 8.45.0
@@ -1817,8 +1817,8 @@ packages:
       zod: 3.21.4
     dev: true
 
-  /drizzle-orm@0.27.0(@vercel/postgres@0.4.1):
-    resolution: {integrity: sha512-LGiJ0icB+wQwgbSCOvAjONY8Ec6G/EDzQQP5PmUaQYeI9OqgpVKHC2T1fFIbvk5dabWsbokJ5NOciVAxriStig==}
+  /drizzle-orm@0.30.0(@types/react@18.2.16)(@vercel/postgres@0.4.1)(react@18.2.0):
+    resolution: {integrity: sha512-SupNouCdvosjzQpLinqnyIu7bBfsUKiaWXfUZ0IyDtwK8rWa2zQ4AOWCda86VJVxgb8xZ1l8vKvlLHyTBalB/g==}
     peerDependencies:
       '@aws-sdk/client-rds-data': '>=3'
       '@cloudflare/workers-types': '>=3'
@@ -1828,15 +1828,18 @@ packages:
       '@planetscale/database': '>=1'
       '@types/better-sqlite3': '*'
       '@types/pg': '*'
+      '@types/react': '>=18'
       '@types/sql.js': '*'
       '@vercel/postgres': '*'
       better-sqlite3: '>=7'
       bun-types: '*'
+      expo-sqlite: '>=13.2.0'
       knex: '*'
       kysely: '*'
       mysql2: '>=2'
       pg: '>=8'
       postgres: '>=3'
+      react: '>=18'
       sql.js: '>=1'
       sqlite3: '>=5'
     peerDependenciesMeta:
@@ -1856,6 +1859,8 @@ packages:
         optional: true
       '@types/pg':
         optional: true
+      '@types/react':
+        optional: true
       '@types/sql.js':
         optional: true
       '@vercel/postgres':
@@ -1863,6 +1868,8 @@ packages:
       better-sqlite3:
         optional: true
       bun-types:
+        optional: true
+      expo-sqlite:
         optional: true
       knex:
         optional: true
@@ -1874,12 +1881,16 @@ packages:
         optional: true
       postgres:
         optional: true
+      react:
+        optional: true
       sql.js:
         optional: true
       sqlite3:
         optional: true
     dependencies:
+      '@types/react': 18.2.16
       '@vercel/postgres': 0.4.1
+      react: 18.2.0
     dev: false
 
   /electron-to-chromium@1.4.378:
